@@ -1,0 +1,29 @@
+/* ══════════════════════════════════════
+   RESET & ROOT
+══════════════════════════════════════ */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --navy:   #0A2540;
+  --navy2:  #071B30;
+  --navy3:  #05131F;
+  --cyan:   #00C2FF;
+  --sky:    #4DA8DA;
+  --white:  #FFFFFF;
+  --slate:  #18293A;
+  --gray:   #F4F7FB;
+  --gray2:  #E6EDF6;
+  --muted:  #5A7A96;
+  --light:  #EBF3FC;
+  --border: rgba(0,194,255,0.14);
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: #fff;
+  color: var(--slate);
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  line-height: 1.65;
+  overflow-x: hidden;
+}

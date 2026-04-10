@@ -1,0 +1,892 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>swint.ai — Intelligent Software. Real Business Impact.</title>
+<meta name="description" content="Swintai helps businesses build smarter operations, automate workflows, and unlock new possibilities through AI-driven solutions — without the complexity.">
+
+<!-- Open Graph -->
+<meta property="og:type"        content="website">
+<meta property="og:url"         content="https://swint.ai/">
+<meta property="og:title"       content="swint.ai — Intelligent Software. Real Business Impact.">
+<meta property="og:description" content="AI-powered solutions that turn complex challenges into measurable business outcomes. Build, automate, and optimize with swint.ai.">
+<meta property="og:image"       content="https://swint.ai/assets/images/og-cover.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+
+<!-- Twitter Card -->
+<meta name="twitter:card"        content="summary_large_image">
+<meta name="twitter:site"        content="@swintai">
+<meta name="twitter:title"       content="swint.ai — Intelligent Software. Real Business Impact.">
+<meta name="twitter:description" content="AI-powered solutions that turn complex challenges into measurable business outcomes.">
+<meta name="twitter:image"       content="https://swint.ai/assets/images/og-cover.png">
+
+<!-- Favicon (SVG inline — no .ico needed) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 72'%3E%3Crect width='72' height='72' rx='16' fill='%230A2540'/%3E%3Ccircle cx='36' cy='36' r='13' fill='%2300C2FF'/%3E%3Ccircle cx='36' cy='36' r='5.2' fill='%2305131F'/%3E%3Ccircle cx='36' cy='10' r='4.5' fill='%2300C2FF'/%3E%3Ccircle cx='36' cy='62' r='4.5' fill='%234DA8DA'/%3E%3Ccircle cx='13' cy='23' r='3.5' fill='%234DA8DA'/%3E%3Ccircle cx='59' cy='23' r='4.5' fill='%2300C2FF'/%3E%3Ccircle cx='13' cy='49' r='4.5' fill='%2300C2FF'/%3E%3Ccircle cx='59' cy='49' r='3.5' fill='%234DA8DA'/%3E%3C/svg%3E">
+
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Outfit:wght@300;400;500;600&family=Rajdhani:wght@400;500;600&display=swap" rel="stylesheet">
+<!-- Utils -->
+<link rel="stylesheet" href="css/utils/variables.css">
+<link rel="stylesheet" href="css/utils/animations.css">
+<link rel="stylesheet" href="css/utils/layout.css">
+<!-- Components -->
+<link rel="stylesheet" href="css/components/logo.css">
+<link rel="stylesheet" href="css/components/navbar.css">
+<link rel="stylesheet" href="css/components/buttons.css">
+<link rel="stylesheet" href="css/components/ticker.css">
+<link rel="stylesheet" href="css/components/footer.css">
+<!-- Pages -->
+<link rel="stylesheet" href="css/pages/home.css">
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body>
+
+<!-- ════════════════════ NAV ════════════════════ -->
+<nav id="mainNav">
+  <a href="#" class="logo-lockup logo-on-dark">
+    <!-- Inline SVG logo mark -->
+    <svg class="logo-mark-svg" width="36" height="36" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <linearGradient id="lmg" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#00C2FF"/>
+          <stop offset="100%" stop-color="#4DA8DA"/>
+        </linearGradient>
+        <filter id="lmf">
+          <feGaussianBlur stdDeviation="1.5" result="b"/>
+          <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+        </filter>
+      </defs>
+      <!-- Hex ring edges -->
+      <line x1="36" y1="6"  x2="62" y2="21" stroke="url(#lmg)" stroke-width="1.2" opacity="0.4"/>
+      <line x1="62" y1="21" x2="62" y2="51" stroke="url(#lmg)" stroke-width="1.2" opacity="0.4"/>
+      <line x1="62" y1="51" x2="36" y2="66" stroke="url(#lmg)" stroke-width="1.2" opacity="0.4"/>
+      <line x1="36" y1="66" x2="10" y2="51" stroke="url(#lmg)" stroke-width="1.2" opacity="0.4"/>
+      <line x1="10" y1="51" x2="10" y2="21" stroke="url(#lmg)" stroke-width="1.2" opacity="0.4"/>
+      <line x1="10" y1="21" x2="36" y2="6"  stroke="url(#lmg)" stroke-width="1.2" opacity="0.4"/>
+      <!-- Spokes to center -->
+      <line x1="36" y1="6"  x2="36" y2="36" stroke="url(#lmg)" stroke-width="0.9" opacity="0.3"/>
+      <line x1="62" y1="51" x2="36" y2="36" stroke="url(#lmg)" stroke-width="0.9" opacity="0.3"/>
+      <line x1="10" y1="51" x2="36" y2="36" stroke="url(#lmg)" stroke-width="0.9" opacity="0.3"/>
+      <!-- Outer nodes -->
+      <circle cx="36" cy="6"  r="4"   fill="url(#lmg)" filter="url(#lmf)"/>
+      <circle cx="62" cy="21" r="3"   fill="#4DA8DA"/>
+      <circle cx="62" cy="51" r="4"   fill="url(#lmg)" filter="url(#lmf)"/>
+      <circle cx="36" cy="66" r="3"   fill="#4DA8DA"/>
+      <circle cx="10" cy="51" r="4"   fill="url(#lmg)" filter="url(#lmf)"/>
+      <circle cx="10" cy="21" r="3"   fill="#4DA8DA"/>
+      <!-- Center node -->
+      <circle cx="36" cy="36" r="10"  fill="url(#lmg)" filter="url(#lmf)"/>
+      <circle cx="36" cy="36" r="4.2" fill="#05131F"/>
+    </svg>
+    <div class="logo-wordmark">
+      <span class="logo-name">swint<span class="dot-ai">.ai</span></span>
+      <span class="logo-sub">Intelligent Systems</span>
+    </div>
+  </a>
+
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#why">Why Us</a></li>
+    <li><a href="#who">Who We Serve</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get Started</a>
+  <button class="ham" id="hamBtn" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- Mobile drawer -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#services" onclick="closeMobile()">Services</a>
+  <a href="#why" onclick="closeMobile()">Why Us</a>
+  <a href="#who" onclick="closeMobile()">Who We Serve</a>
+  <a href="#contact" onclick="closeMobile()" style="color:var(--cyan);">Get Started →</a>
+</div>
+
+<!-- ════════════════════ HERO ════════════════════ -->
+<section class="hero" id="home">
+  <canvas id="heroCanvas"></canvas>
+  <div class="hero-grid"></div>
+  <div class="hero-inner">
+    <div class="hero-text">
+      <p class="hero-eyebrow">AI-Powered Business Solutions</p>
+      <h1 class="hero-h1">Intelligent Software.<br><em>Real Business Impact.</em></h1>
+      <p class="hero-sub">Swintai helps businesses of every size build smarter operations, automate their workflows, and unlock new possibilities through AI-driven solutions — without the complexity.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary">Book a Consultation</a>
+        <a href="#services" class="btn-ghost">See Our Solutions</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <canvas id="markCanvas" width="920" height="920"></canvas>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ TICKER ════════════════════ -->
+<div class="ticker" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<!-- ════════════════════ SOCIAL PROOF ════════════════════ -->
+<section class="proof-section" id="proof">
+  <div class="section-inner">
+    <p class="eyebrow">Client Stories</p>
+    <h2 class="section-h2">Results That Speak<br>for Themselves</h2>
+    <p class="section-lead">What businesses say after working with us.</p>
+
+    <div class="stats-row">
+      <div class="stat-item reveal" data-delay="0">
+        <span class="stat-num">3×</span>
+        <span class="stat-label">Faster delivery than traditional dev</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal" data-delay="100">
+        <span class="stat-num">80%</span>
+        <span class="stat-label">Reduction in manual processing time</span>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item reveal" data-delay="200">
+        <span class="stat-num">6 wks</span>
+        <span class="stat-label">Average time to first working solution</span>
+      </div>
+    </div>
+
+    <div class="carousel-container reveal">
+      <div class="carousel-viewport" id="carouselViewport">
+        <div class="carousel-track" id="testimonialTrack">
+
+          <!-- ─── Set 1 ─── -->
+          <div class="carousel-page">
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">Swintai transformed our document processing pipeline. What used to take our team three days now runs overnight with near-zero errors. The ROI was visible within the first month.</p>
+              <div class="t-author">
+                <div class="t-avatar">JM</div>
+                <div class="t-author-info">
+                  <strong>James M.</strong>
+                  <span>Head of Operations · Financial Services</span>
+                </div>
+              </div>
+            </div>
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">We needed an AI strategy we could actually execute, not a 50-page report. Swintai gave us a clear roadmap and stayed with us through delivery. That partnership made all the difference.</p>
+              <div class="t-author">
+                <div class="t-avatar">AO</div>
+                <div class="t-author-info">
+                  <strong>Amara O.</strong>
+                  <span>Chief Technology Officer · Logistics Company</span>
+                </div>
+              </div>
+            </div>
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">Our WhatsApp support bot handles over 70% of routine enquiries automatically now. Customer satisfaction went up — and our team can focus on cases that actually matter.</p>
+              <div class="t-author">
+                <div class="t-avatar">KA</div>
+                <div class="t-author-info">
+                  <strong>Kofi A.</strong>
+                  <span>Customer Experience Lead · Fintech Startup</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── Set 2 ─── -->
+          <div class="carousel-page">
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">We integrated AI into our patient scheduling and triage process. Wait times dropped by 40% and staff aren't buried in admin anymore. Swintai made a complex rollout feel straightforward.</p>
+              <div class="t-author">
+                <div class="t-avatar">RN</div>
+                <div class="t-author-info">
+                  <strong>Rachel N.</strong>
+                  <span>Operations Manager · Healthcare Group</span>
+                </div>
+              </div>
+            </div>
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">Our learners now get personalised content recommendations powered by AI. Engagement is up 60% and completion rates have never been higher. Swintai built it in six weeks, not six months.</p>
+              <div class="t-author">
+                <div class="t-avatar">EB</div>
+                <div class="t-author-info">
+                  <strong>Emmanuel B.</strong>
+                  <span>CEO · EdTech Platform</span>
+                </div>
+              </div>
+            </div>
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">As a growing retail chain, we couldn't afford enterprise-level complexity. Swintai gave us AI-powered inventory forecasting that fit our scale and budget. Stock-outs are down 55%.</p>
+              <div class="t-author">
+                <div class="t-avatar">TC</div>
+                <div class="t-author-info">
+                  <strong>Tunde C.</strong>
+                  <span>Founder & MD · Retail Chain</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ─── Set 3 ─── -->
+          <div class="carousel-page">
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">Swintai built a predictive demand model that cut our excess inventory by a third. Our supply chain is leaner, our margins are healthier, and our ops team actually trusts the data now.</p>
+              <div class="t-author">
+                <div class="t-avatar">SD</div>
+                <div class="t-author-info">
+                  <strong>Sarah D.</strong>
+                  <span>Supply Chain Director · FMCG Company</span>
+                </div>
+              </div>
+            </div>
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">We launched an AI credit scoring feature that processes applications in seconds. Default rates are lower than our manual process ever achieved. Swintai's team genuinely understood our domain.</p>
+              <div class="t-author">
+                <div class="t-avatar">MO</div>
+                <div class="t-author-info">
+                  <strong>Michael O.</strong>
+                  <span>Co-Founder · Digital Bank</span>
+                </div>
+              </div>
+            </div>
+            <div class="t-card">
+              <div class="t-quote-mark">"</div>
+              <p class="t-quote">Compliance reviews that took our team two weeks now complete in two days. The AI flags anomalies we'd have missed entirely. Working with Swintai felt less like a vendor and more like a partner.</p>
+              <div class="t-author">
+                <div class="t-avatar">YA</div>
+                <div class="t-author-info">
+                  <strong>Yetunde A.</strong>
+                  <span>Head of Compliance · Audit Firm</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="carousel-footer">
+        <div class="carousel-dots" id="carouselDots">
+          <button class="dot active" aria-label="Set 1"></button>
+          <button class="dot" aria-label="Set 2"></button>
+          <button class="dot" aria-label="Set 3"></button>
+        </div>
+        <div class="carousel-arrows">
+          <button class="carousel-btn" id="carouselPrev" aria-label="Previous set" disabled>←</button>
+          <button class="carousel-btn" id="carouselNext" aria-label="Next set">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ VALUE ════════════════════ -->
+<section class="value-section" id="value">
+  <div class="section-inner">
+    <p class="eyebrow">The Swintai Difference</p>
+    <h2 class="section-h2">More Than Software.<br>A Smarter Way to Operate.</h2>
+    <div class="value-grid">
+      <div>
+        <p class="value-statement reveal">We design <em>intelligent systems</em> that learn, adapt, and deliver measurable outcomes — turning AI from a buzzword into your biggest competitive advantage.</p>
+      </div>
+      <div class="vp-list">
+        <div class="vp reveal" data-delay="0">
+          <div class="vp-icon">⚡</div>
+          <div class="vp-text">
+            <strong>Speed to Value</strong>
+            <p>Measurable ROI in weeks, not years of lengthy development cycles.</p>
+          </div>
+        </div>
+        <div class="vp reveal" data-delay="80">
+          <div class="vp-icon">🏦</div>
+          <div class="vp-text">
+            <strong>Deep Domain Expertise</strong>
+            <p>Proven experience in complex, compliance-sensitive business environments.</p>
+          </div>
+        </div>
+        <div class="vp reveal" data-delay="160">
+          <div class="vp-icon">📈</div>
+          <div class="vp-text">
+            <strong>Outcomes-First Thinking</strong>
+            <p>Every solution is tied to business goals — efficiency, cost reduction, and growth.</p>
+          </div>
+        </div>
+        <div class="vp reveal" data-delay="240">
+          <div class="vp-icon">🔗</div>
+          <div class="vp-text">
+            <strong>Built to Scale</strong>
+            <p>Architected to integrate with what you have and grow as your business does.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ SERVICES ════════════════════ -->
+<section class="services-section" id="services">
+  <div class="section-inner">
+    <p class="eyebrow">What We Do</p>
+    <h2 class="section-h2">Build. Automate. Optimize.</h2>
+    <p class="section-lead">Three integrated service pillars designed to carry any business from AI-readiness to full intelligent transformation.</p>
+
+    <div class="tabs-row">
+      <button class="stab active" onclick="switchTab('build',this)">🟦 Build</button>
+      <button class="stab" onclick="switchTab('automate',this)">🟩 Automate</button>
+      <button class="stab" onclick="switchTab('optimize',this)">🟨 Optimize</button>
+    </div>
+
+    <div class="svc-panel active" id="panel-build">
+      <div class="s-card reveal" data-delay="0">
+        <div class="s-icon i-build">🧠</div>
+        <h3>AI Product Development</h3>
+        <p>End-to-end design and deployment of AI-powered products — from first concept to scalable, production-ready systems tailored to your exact business needs.</p>
+      </div>
+      <div class="s-card reveal" data-delay="120">
+        <div class="s-icon i-build">🔌</div>
+        <h3>AI Integration & API Services</h3>
+        <p>Embed AI capabilities directly into your existing platforms and tools — without rebuilding everything from scratch or disrupting daily operations.</p>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="panel-automate">
+      <div class="s-card reveal" data-delay="0">
+        <div class="s-icon i-auto">⚙️</div>
+        <h3>Intelligent Process Automation</h3>
+        <p>Replace manual, repetitive workflows with AI-powered automation that reduces errors, speeds up delivery, and frees your team to focus on higher-value work.</p>
+      </div>
+      <div class="s-card reveal" data-delay="120">
+        <div class="s-icon i-auto">📄</div>
+        <h3>Document Intelligence</h3>
+        <p>Automatically extract, classify, and process data from invoices, contracts, and forms — turning document-heavy operations into streamlined, accurate workflows.</p>
+      </div>
+      <div class="s-card reveal" data-delay="240">
+        <div class="s-icon i-auto">💬</div>
+        <h3>Chatbots & Virtual Assistants</h3>
+        <p>Deploy intelligent conversational agents across web, mobile, and messaging apps — handling customer enquiries and internal support around the clock.</p>
+      </div>
+    </div>
+
+    <div class="svc-panel" id="panel-optimize">
+      <div class="s-card reveal" data-delay="0">
+        <div class="s-icon i-opt">🗺️</div>
+        <h3>AI Strategy & Advisory</h3>
+        <p>We help you identify where AI creates the most impact in your business, build a clear implementation roadmap, and execute with confidence.</p>
+      </div>
+      <div class="s-card reveal" data-delay="120">
+        <div class="s-icon i-opt">📦</div>
+        <h3>Supply Chain & Operations AI</h3>
+        <p>Apply predictive analytics to improve demand forecasting, inventory management, and logistics — reducing costs and improving delivery reliability.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ WHY ════════════════════ -->
+<section class="why-section" id="why">
+  <div class="section-inner">
+    <p class="eyebrow">Why Swintai</p>
+    <h2 class="section-h2">The Intelligence<br>Advantage</h2>
+    <p class="section-lead">What sets us apart from every other software provider.</p>
+    <div class="why-grid">
+      <div class="why-card reveal" data-delay="0">
+        <div class="why-num">01</div>
+        <h3>Business-First</h3>
+        <p>We start with your goals — cost savings, efficiency, growth — and work backward to the technology. Never the other way around.</p>
+      </div>
+      <div class="why-card reveal" data-delay="100">
+        <div class="why-num">02</div>
+        <h3>Domain-Aligned</h3>
+        <p>Deep experience in complex, regulated environments including finance, audit, compliance, and operations — where precision matters most.</p>
+      </div>
+      <div class="why-card reveal" data-delay="200">
+        <div class="why-num">03</div>
+        <h3>Scalable by Design</h3>
+        <p>Every solution integrates cleanly with your existing systems and scales as your business grows — no rip-and-replace required.</p>
+      </div>
+      <div class="why-card reveal" data-delay="300">
+        <div class="why-num">04</div>
+        <h3>Rapid Deployment</h3>
+        <p>Structured delivery sprints mean you see working solutions — and real ROI — in weeks, not quarters.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════════════ WHO WE SERVE ════════════════════ -->
+<section class="serve-section" id="who">
+  <div class="section-inner">
+    <p class="eyebrow">Who We Serve</p>
+    <h2 class="section-h2">Built for Businesses<br>Ready to Grow Smarter</h2>
+    <p class="section-lead">Whether you're a small team or a large business, if you're looking to work more intelligently, we're built for you.</p>
+
+    <div class="pills-wrap">
+      <div class="pill"><span class="pill-ic">🏦</span> Financial Services & Fintechs</div>
+      <div class="pill"><span class="pill-ic">🏢</span> Mid-Size & Large Businesses</div>
+      <div class="pill"><span class="pill-ic">🚀</span> Growing SMEs & Startups</div>
+      <div class="pill"><span class="pill-ic">🚚</span> Logistics & Supply Chain</div>
+      <div class="pill"><span class="pill-ic">🎓</span> Education & Service Providers</div>
+      <div class="pill"><span class="pill-ic">⚕️</span> Healthcare & Operations</div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ CONTACT ════════════════════ -->
+<section class="contact-section" id="contact">
+  <div class="contact-glow"></div>
+  <div class="section-inner contact-inner">
+
+    <div class="contact-left reveal">
+      <p class="eyebrow">Get in Touch</p>
+      <h2 class="cta-h2">Let's Build Something<br><em>Intelligent Together.</em></h2>
+      <p class="cta-sub">Tell us about your business challenge. We'll show you exactly how AI can solve it — practically and profitably.</p>
+      <div class="contact-details">
+        <div class="contact-detail-item">
+          <span class="contact-detail-icon">✉</span>
+          <a href="mailto:hello@swint.ai">hello@swint.ai</a>
+        </div>
+        <div class="contact-detail-item">
+          <span class="contact-detail-icon">⚡</span>
+          <span>We respond within 24 hours</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-right reveal" data-delay="150">
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-name">Your Name</label>
+            <input type="text" id="cf-name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-group">
+            <label for="cf-company">Company</label>
+            <input type="text" id="cf-company" name="company" placeholder="Acme Corp">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="cf-email">Work Email <span class="form-required">*</span></label>
+          <input type="email" id="cf-email" name="email" placeholder="jane@company.com" required>
+        </div>
+        <div class="form-group">
+          <label for="cf-challenge">What's your biggest challenge?</label>
+          <textarea id="cf-challenge" name="challenge" rows="4" placeholder="Describe the problem you're trying to solve or the outcome you're aiming for..."></textarea>
+        </div>
+        <button type="submit" class="form-submit">
+          <span class="form-submit-text">Send Message</span>
+          <span class="form-submit-arrow">→</span>
+        </button>
+      </form>
+      <div class="form-success" id="formSuccess" aria-live="polite">
+        <div class="form-success-icon">✓</div>
+        <strong>Message sent!</strong>
+        <p>We'll be in touch within 24 hours.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ════════════════════ FOOTER ════════════════════ -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <a href="#" class="logo-lockup logo-on-dark" style="margin-bottom:0;">
+        <svg width="28" height="28" viewBox="0 0 72 72" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="flg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#00C2FF"/><stop offset="100%" stop-color="#4DA8DA"/>
+            </linearGradient>
+          </defs>
+          <line x1="36" y1="6"  x2="62" y2="21" stroke="url(#flg)" stroke-width="1.5" opacity="0.4"/>
+          <line x1="62" y1="21" x2="62" y2="51" stroke="url(#flg)" stroke-width="1.5" opacity="0.4"/>
+          <line x1="62" y1="51" x2="36" y2="66" stroke="url(#flg)" stroke-width="1.5" opacity="0.4"/>
+          <line x1="36" y1="66" x2="10" y2="51" stroke="url(#flg)" stroke-width="1.5" opacity="0.4"/>
+          <line x1="10" y1="51" x2="10" y2="21" stroke="url(#flg)" stroke-width="1.5" opacity="0.4"/>
+          <line x1="10" y1="21" x2="36" y2="6"  stroke="url(#flg)" stroke-width="1.5" opacity="0.4"/>
+          <circle cx="36" cy="6"  r="4"  fill="url(#flg)"/>
+          <circle cx="62" cy="21" r="3"  fill="#4DA8DA"/>
+          <circle cx="62" cy="51" r="4"  fill="url(#flg)"/>
+          <circle cx="36" cy="66" r="3"  fill="#4DA8DA"/>
+          <circle cx="10" cy="51" r="4"  fill="url(#flg)"/>
+          <circle cx="10" cy="21" r="3"  fill="#4DA8DA"/>
+          <circle cx="36" cy="36" r="9"  fill="url(#flg)"/>
+          <circle cx="36" cy="36" r="3.8" fill="#05131F"/>
+        </svg>
+        <div class="logo-wordmark">
+          <span class="logo-name" style="font-size:17px;">swint<span class="dot-ai">.ai</span></span>
+        </div>
+      </a>
+      <p class="footer-tagline" style="margin-top:8px;">Build Smart. Operate Smarter.</p>
+    </div>
+    <ul class="footer-links">
+      <li><a href="#services">Services</a></li>
+      <li><a href="#why">Why Us</a></li>
+      <li><a href="#who">Who We Serve</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <p class="footer-copy">© 2025 swint.ai — All rights reserved. Intelligent solutions for ambitious businesses.</p>
+</footer>
+
+<!-- ════════════════════ SCRIPTS ════════════════════ -->
+<script>
+// ══════════════════════════════════════
+//  HAMBURGER MENU
+// ══════════════════════════════════════
+const hamBtn     = document.getElementById('hamBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+hamBtn.addEventListener('click', () => {
+  mobileMenu.classList.toggle('open');
+});
+function closeMobile() { mobileMenu.classList.remove('open'); }
+
+// ══════════════════════════════════════
+//  HERO PARTICLE NETWORK
+// ══════════════════════════════════════
+const HC = document.getElementById('heroCanvas');
+const HX = HC.getContext('2d');
+function resizeHero() { HC.width = HC.offsetWidth; HC.height = HC.offsetHeight; }
+resizeHero();
+window.addEventListener('resize', () => { resizeHero(); });
+
+class HP {
+  constructor() { this.reset(true); }
+  reset(scatter) {
+    this.x  = scatter ? Math.random()*HC.width : Math.random()*HC.width;
+    this.y  = scatter ? Math.random()*HC.height : HC.height + 10;
+    this.vx = (Math.random()-0.5)*0.28;
+    this.vy = (Math.random()-0.5)*0.28 - 0.08;
+    this.life = scatter ? Math.random() : 0;
+    this.maxL = 0.55 + Math.random()*0.45;
+    this.r  = 0.7 + Math.random()*1.8;
+    this.c  = Math.random()>0.4;
+  }
+  step() {
+    this.x += this.vx; this.y += this.vy; this.life += 0.003;
+    if (this.life > this.maxL || this.y < -5) this.reset(false);
+  }
+  draw() {
+    const a = Math.sin((this.life/this.maxL)*Math.PI)*0.45;
+    HX.beginPath(); HX.arc(this.x,this.y,this.r,0,Math.PI*2);
+    HX.fillStyle = this.c ? `rgba(0,194,255,${a})` : `rgba(77,168,218,${a*0.65})`;
+    HX.fill();
+  }
+}
+const hParts = Array.from({length:110},()=>new HP());
+const CONN_DIST = 85;
+function heroLoop() {
+  HX.clearRect(0,0,HC.width,HC.height);
+  for(let i=0;i<hParts.length;i++) {
+    hParts[i].step(); hParts[i].draw();
+    for(let j=i+1;j<hParts.length;j++){
+      const dx=hParts[i].x-hParts[j].x, dy=hParts[i].y-hParts[j].y;
+      const d=Math.sqrt(dx*dx+dy*dy);
+      if(d<CONN_DIST){
+        HX.beginPath();HX.moveTo(hParts[i].x,hParts[i].y);HX.lineTo(hParts[j].x,hParts[j].y);
+        HX.strokeStyle=`rgba(0,194,255,${(1-d/CONN_DIST)*0.1})`;HX.lineWidth=0.5;HX.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(heroLoop);
+}
+heroLoop();
+
+// ══════════════════════════════════════
+//  LOGO MARK ANIMATION (hero right)
+// ══════════════════════════════════════
+const MC  = document.getElementById('markCanvas');
+const MX  = MC.getContext('2d');
+const MW  = MC.width, MH = MC.height;
+const MCX = MW/2, MCY = MH/2;
+const CYAN = '#00C2FF', SKY = '#4DA8DA';
+
+const HEX = 185;
+const mNodes = Array.from({length:6},(_,i)=>{
+  const a=(Math.PI/3)*i-Math.PI/2;
+  return { x:MCX+HEX*Math.cos(a), y:MCY+HEX*Math.sin(a), phase:i*(Math.PI/3), cyan:i%2===0 };
+});
+const mCtr = { x:MCX, y:MCY, phase:0, isCenter:true };
+const mAll = [...mNodes, mCtr];
+
+const mEdges = [
+  [0,1],[1,2],[2,3],[3,4],[4,5],[5,0],
+  [0,6],[2,6],[4,6],[1,4],[0,3]
+];
+
+class MPart {
+  constructor(ei){ this.init(ei); }
+  init(ei){
+    this.ei = ei??Math.floor(Math.random()*mEdges.length);
+    const [a,b]=mEdges[this.ei];
+    this.flip=Math.random()>0.5;
+    this.na=mAll[this.flip?a:b]; this.nb=mAll[this.flip?b:a];
+    this.t=Math.random(); this.spd=0.003+Math.random()*0.0042;
+    this.sz=3+Math.random()*3.5; this.cyan=Math.random()>0.4;
+  }
+  step(){ this.t+=this.spd; if(this.t>=1) this.init(); }
+  draw(){
+    const e=this.t<0.5?2*this.t*this.t:-1+(4-2*this.t)*this.t;
+    const px=this.na.x+(this.nb.x-this.na.x)*e;
+    const py=this.na.y+(this.nb.y-this.na.y)*e;
+    const al=this.t<0.1?this.t/0.1:this.t>0.9?(1-this.t)/0.1:1;
+    const [r,g,b]=this.cyan?[0,194,255]:[77,168,218];
+    const grd=MX.createRadialGradient(px,py,0,px,py,this.sz*3.5);
+    grd.addColorStop(0,`rgba(${r},${g},${b},${al*0.55})`);
+    grd.addColorStop(1,`rgba(${r},${g},${b},0)`);
+    MX.beginPath();MX.arc(px,py,this.sz*3.5,0,Math.PI*2);MX.fillStyle=grd;MX.fill();
+    MX.beginPath();MX.arc(px,py,this.sz,0,Math.PI*2);
+    MX.fillStyle=`rgba(${r},${g},${b},${al*0.95})`;MX.fill();
+  }
+}
+
+class MRipple {
+  constructor(d){ this.delay=d;this.r=0;this.a=0;this.alive=false; }
+  step(){
+    if(this.delay>0){this.delay--;return;}
+    if(!this.alive){this.alive=true;this.r=0;this.a=0.48;}
+    this.r+=2; this.a-=0.0058;
+    if(this.a<=0){this.alive=false;this.delay=95+Math.random()*75;}
+  }
+  draw(){
+    if(!this.alive)return;
+    MX.beginPath();MX.arc(MCX,MCY,this.r,0,Math.PI*2);
+    MX.strokeStyle=`rgba(0,194,255,${this.a})`;MX.lineWidth=1.3;MX.stroke();
+  }
+}
+
+const mParts  = mEdges.flatMap((_,i)=>[new MPart(i),new MPart(i),new MPart(i),new MPart(i)]);
+const mRipple = [new MRipple(0),new MRipple(65),new MRipple(130)];
+let mT=0, mRot=0;
+
+function drawMEdge(a,b,al){
+  const na=mAll[a],nb=mAll[b];
+  const g=MX.createLinearGradient(na.x,na.y,nb.x,nb.y);
+  g.addColorStop(0,`rgba(0,194,255,${al})`);g.addColorStop(1,`rgba(77,168,218,${al})`);
+  MX.beginPath();MX.moveTo(na.x,na.y);MX.lineTo(nb.x,nb.y);
+  MX.strokeStyle=g;MX.lineWidth=1.1;MX.stroke();
+}
+
+function drawMNode(n,t){
+  const pulse=0.72+Math.sin(t*0.032+n.phase)*0.28;
+  const base=n.isCenter?24:(n.cyan?13:10);
+  const r=base*(0.92+pulse*0.15);
+  if(n.isCenter){
+    MX.beginPath();MX.arc(MCX,MCY,r+16,0,Math.PI*2);
+    MX.strokeStyle=`rgba(0,194,255,${pulse*0.2})`;MX.lineWidth=1.4;MX.stroke();
+    const g=MX.createRadialGradient(MCX,MCY,0,MCX,MCY,r);
+    g.addColorStop(0,CYAN);g.addColorStop(0.5,'#0088CC');g.addColorStop(1,'#0A2540');
+    MX.beginPath();MX.arc(MCX,MCY,r,0,Math.PI*2);MX.fillStyle=g;MX.fill();
+    MX.beginPath();MX.arc(MCX,MCY,r*0.36,0,Math.PI*2);MX.fillStyle='#05131F';MX.fill();
+    const halo=MX.createRadialGradient(MCX,MCY,r,MCX,MCY,r+40);
+    halo.addColorStop(0,`rgba(0,194,255,${pulse*0.38})`);halo.addColorStop(1,'rgba(0,194,255,0)');
+    MX.beginPath();MX.arc(MCX,MCY,r+40,0,Math.PI*2);MX.fillStyle=halo;MX.fill();
+  } else {
+    const rgb=n.cyan?'0,194,255':'77,168,218';
+    const col=n.cyan?CYAN:SKY;
+    const halo=MX.createRadialGradient(n.x,n.y,r,n.x,n.y,r+24);
+    halo.addColorStop(0,`rgba(${rgb},${pulse*0.45})`);halo.addColorStop(1,`rgba(${rgb},0)`);
+    MX.beginPath();MX.arc(n.x,n.y,r+24,0,Math.PI*2);MX.fillStyle=halo;MX.fill();
+    MX.beginPath();MX.arc(n.x,n.y,r,0,Math.PI*2);MX.fillStyle=col;MX.fill();
+    MX.beginPath();MX.arc(n.x-r*0.2,n.y-r*0.2,r*0.36,0,Math.PI*2);
+    MX.fillStyle=`rgba(255,255,255,${pulse*0.28})`;MX.fill();
+  }
+}
+
+function markLoop(){
+  MX.clearRect(0,0,MW,MH);
+  mT++; mRot+=0.0006;
+  const ea=0.13+Math.sin(mT*0.011)*0.04;
+  MX.save();MX.translate(MCX,MCY);MX.rotate(mRot);MX.translate(-MCX,-MCY);
+  mEdges.forEach(([a,b])=>drawMEdge(a,b,ea));
+  mParts.forEach(p=>{p.step();p.draw();});
+  mAll.forEach(n=>drawMNode(n,mT));
+  MX.restore();
+  mRipple.forEach(r=>{r.step();r.draw();});
+  requestAnimationFrame(markLoop);
+}
+markLoop();
+
+// ══════════════════════════════════════
+//  TICKER
+// ══════════════════════════════════════
+const words = [
+  'Intelligent Automation','AI Product Development','Workflow Optimisation',
+  'AI Strategy Advisory','Document Intelligence','Chatbot Solutions',
+  'Supply Chain AI','Process Automation','Decision Intelligence',
+  'Business Transformation','Data Flow Systems','Predictive Analytics'
+];
+const track = document.getElementById('tickerTrack');
+const html  = [...words,...words].map(w=>`<span class="ticker-item">${w} <span style="opacity:.4;">◆</span></span>`).join('');
+track.innerHTML = html + html;
+
+// ══════════════════════════════════════
+//  SERVICE TABS
+// ══════════════════════════════════════
+function switchTab(name, btn) {
+  document.querySelectorAll('.svc-panel').forEach(p=>p.classList.remove('active'));
+  document.querySelectorAll('.stab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('panel-'+name).classList.add('active');
+  btn.classList.add('active');
+  // Re-trigger reveal for newly visible cards
+  document.querySelectorAll(`#panel-${name} .reveal`).forEach(el => {
+    el.classList.remove('revealed');
+    requestAnimationFrame(() => {
+      el.style.transitionDelay = `${el.dataset.delay || 0}ms`;
+      el.classList.add('revealed');
+    });
+  });
+}
+
+// ══════════════════════════════════════
+//  NAV: SCROLL STATE
+// ══════════════════════════════════════
+const mainNav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  mainNav.classList.toggle('scrolled', window.scrollY > 60);
+}, { passive: true });
+
+// ══════════════════════════════════════
+//  NAV: ACTIVE SECTION HIGHLIGHTING
+// ══════════════════════════════════════
+const navAnchors = document.querySelectorAll('.nav-links a');
+const pageSections = document.querySelectorAll('section[id]');
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navAnchors.forEach(a => a.classList.remove('active'));
+      const match = document.querySelector(`.nav-links a[href="#${entry.target.id}"]`);
+      if (match) match.classList.add('active');
+    }
+  });
+}, { rootMargin: '-40% 0px -55% 0px' });
+
+pageSections.forEach(s => sectionObserver.observe(s));
+
+// ══════════════════════════════════════
+//  SCROLL REVEAL
+// ══════════════════════════════════════
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const delay = parseInt(entry.target.dataset.delay || 0, 10);
+      entry.target.style.transitionDelay = `${delay}ms`;
+      entry.target.classList.add('revealed');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+// Observe all .reveal elements except those in hidden tab panels
+document.querySelectorAll('.reveal').forEach(el => {
+  if (!el.closest('.svc-panel:not(.active)')) {
+    revealObserver.observe(el);
+  }
+});
+
+// ══════════════════════════════════════
+//  EMAILJS — CONTACT FORM
+//  Replace the three values below with
+//  your credentials from emailjs.com
+// ══════════════════════════════════════
+const EMAILJS_PUBLIC_KEY  = 'Uz8wzOIO7CB8nQLvV';
+const EMAILJS_SERVICE_ID  = 'service_x4muhcn';
+const EMAILJS_TEMPLATE_ID = 'template_d2mseal';
+
+emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+
+const contactForm = document.getElementById('contactForm');
+const formSuccess = document.getElementById('formSuccess');
+const submitBtn   = contactForm.querySelector('.form-submit');
+const submitText  = submitBtn.querySelector('.form-submit-text');
+
+contactForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  // Validate required fields
+  let valid = true;
+  contactForm.querySelectorAll('[required]').forEach(field => {
+    field.classList.remove('invalid');
+    if (!field.value.trim()) { field.classList.add('invalid'); valid = false; }
+  });
+  const emailField = contactForm.querySelector('#cf-email');
+  if (emailField && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailField.value)) {
+    emailField.classList.add('invalid'); valid = false;
+  }
+  if (!valid) return;
+
+  // Loading state
+  submitBtn.disabled = true;
+  submitText.textContent = 'Sending…';
+
+  try {
+    await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm);
+    // Success
+    contactForm.style.display = 'none';
+    formSuccess.classList.add('visible');
+  } catch (err) {
+    // Error — re-enable button so user can retry
+    console.error('EmailJS error:', err);
+    submitText.textContent = 'Failed — please try again';
+    submitBtn.disabled = false;
+    setTimeout(() => { submitText.textContent = 'Send Message'; }, 3000);
+  }
+});
+
+// Clear invalid state as user types
+contactForm.querySelectorAll('input, textarea').forEach(field => {
+  field.addEventListener('input', () => field.classList.remove('invalid'));
+});
+
+// ══════════════════════════════════════
+//  TESTIMONIAL CAROUSEL (3-per-set)
+// ══════════════════════════════════════
+(function () {
+  const viewport = document.getElementById('carouselViewport');
+  const track    = document.getElementById('testimonialTrack');
+  const pages    = Array.from(track.querySelectorAll('.carousel-page'));
+  const dots     = Array.from(document.querySelectorAll('#carouselDots .dot'));
+  const prevBtn  = document.getElementById('carouselPrev');
+  const nextBtn  = document.getElementById('carouselNext');
+  const total    = pages.length; // 3
+  let current    = 0;
+
+  function goTo(idx) {
+    current = Math.max(0, Math.min(idx, total - 1));
+    // Each page is exactly viewport width — translate by multiples of it
+    track.style.transform = `translateX(-${current * viewport.offsetWidth}px)`;
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+    prevBtn.disabled = current === 0;
+    nextBtn.disabled = current === total - 1;
+  }
+
+  prevBtn.addEventListener('click', () => goTo(current - 1));
+  nextBtn.addEventListener('click', () => goTo(current + 1));
+  dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+
+  // Swipe support
+  let startX = 0;
+  track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; }, { passive: true });
+  track.addEventListener('touchend',   e => {
+    const dx = startX - e.changedTouches[0].clientX;
+    if (Math.abs(dx) > 50) goTo(current + (dx > 0 ? 1 : -1));
+  }, { passive: true });
+
+  // Recalculate offset on resize (viewport width may change)
+  window.addEventListener('resize', () => goTo(current), { passive: true });
+
+  goTo(0);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+/* ══════════════════════════════════════
+   LOGO COMPONENT
+══════════════════════════════════════ */
+.logo-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  flex-shrink: 0;
+}
+.logo-lockup .logo-mark-svg { display: block; }
+.logo-wordmark {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+.logo-name {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 800;
+  font-size: 21px;
+  letter-spacing: -0.5px;
+  color: #fff;
+  line-height: 1;
+}
+.logo-name .dot-ai {
+  color: var(--cyan);
+  font-weight: 400;
+}
+.logo-sub {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 8.5px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: rgba(0,194,255,0.5);
+  margin-top: 3px;
+}
+
+/* Dark background variant */
+.logo-on-dark .logo-name  { color: #fff; }
+/* Light background variant */
+.logo-on-light .logo-name { color: var(--navy); }
+.logo-on-light .logo-sub  { color: var(--muted); opacity: 0.7; }
