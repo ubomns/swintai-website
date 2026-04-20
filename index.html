@@ -41,8 +41,6 @@
 <link rel="stylesheet" href="css/components/footer.css">
 <!-- Pages -->
 <link rel="stylesheet" href="css/pages/home.css">
-<!-- EmailJS SDK -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 <body>
 
@@ -798,15 +796,9 @@ document.querySelectorAll('.reveal').forEach(el => {
 });
 
 // ══════════════════════════════════════
-//  EMAILJS — CONTACT FORM
-//  Replace the three values below with
-//  your credentials from emailjs.com
+//  WEB3FORMS — CONTACT FORM
 // ══════════════════════════════════════
-const EMAILJS_PUBLIC_KEY  = 'Uz8wzOIO7CB8nQLvV';
-const EMAILJS_SERVICE_ID  = 'service_x4muhcn';
-const EMAILJS_TEMPLATE_ID = 'template_d2mseal';
-
-emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+const W3F_ACCESS_KEY = '474b978f-1f02-4660-9c5d-acc488eee68e';
 
 const contactForm = document.getElementById('contactForm');
 const formSuccess = document.getElementById('formSuccess');
@@ -833,13 +825,25 @@ contactForm.addEventListener('submit', async (e) => {
   submitText.textContent = 'Sending…';
 
   try {
-    await emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, contactForm);
-    // Success
+    const data = {
+      access_key: W3F_ACCESS_KEY,
+      name:      contactForm.querySelector('[name="name"]').value,
+      company:   contactForm.querySelector('[name="company"]').value,
+      email:     contactForm.querySelector('[name="email"]').value,
+      challenge: contactForm.querySelector('[name="challenge"]').value,
+      subject:   'New enquiry from swintai.com',
+    };
+    const res = await fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(data),
+    });
+    const json = await res.json();
+    if (!res.ok || !json.success) throw new Error(json.message || 'Submit failed');
     contactForm.style.display = 'none';
     formSuccess.classList.add('visible');
   } catch (err) {
-    // Error — re-enable button so user can retry
-    console.error('EmailJS error:', err);
+    console.error('Web3Forms error:', err);
     submitText.textContent = 'Failed — please try again';
     submitBtn.disabled = false;
     setTimeout(() => { submitText.textContent = 'Send Message'; }, 3000);
