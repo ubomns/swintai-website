@@ -262,12 +262,14 @@
   font-size: 14px;
   color: rgba(255,255,255,0.55);
 }
-.contact-detail-item a {
+.contact-detail-item a,
+a.contact-detail-item {
   color: var(--cyan);
   text-decoration: none;
   transition: opacity 0.2s;
 }
-.contact-detail-item a:hover { opacity: 0.75; }
+.contact-detail-item a:hover,
+a.contact-detail-item:hover { opacity: 0.75; }
 .contact-detail-icon {
   width: 28px; height: 28px;
   border-radius: 7px;
