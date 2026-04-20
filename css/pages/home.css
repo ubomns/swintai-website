@@ -635,6 +635,11 @@
   -webkit-perspective: 900px;
   border-radius: 16px;
 }
+/* Override reveal's translateY(0) — that transform creates a stacking context
+   which flattens preserve-3d on children and breaks backface-visibility */
+.why-card.revealed {
+  transform: none;
+}
 .why-flipper {
   position: relative;
   width: 100%;
