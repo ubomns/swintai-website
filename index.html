@@ -485,7 +485,7 @@
       <div class="contact-details">
         <div class="contact-detail-item">
           <span class="contact-detail-icon">✉</span>
-          <a href="mailto:hello@swint.ai">hello@swint.ai</a>
+          <a href="mailto:hello@swintai.com">hello@swintai.com</a>
         </div>
         <div class="contact-detail-item">
           <span class="contact-detail-icon">⚡</span>
@@ -859,6 +859,7 @@ contactForm.addEventListener('submit', async (e) => {
   try {
     const data = {
       access_key: W3F_ACCESS_KEY,
+      to:        'hello@swintai.com',
       name:      contactForm.querySelector('[name="name"]').value,
       company:   contactForm.querySelector('[name="company"]').value,
       email:     contactForm.querySelector('[name="email"]').value,
