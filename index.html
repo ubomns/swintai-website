@@ -483,7 +483,7 @@
       <h2 class="cta-h2">Let's Build Something<br><em>Intelligent Together.</em></h2>
       <p class="cta-sub">Tell us about your business challenge. We'll show you exactly how AI can solve it — practically and profitably.</p>
       <div class="contact-details">
-        <a class="contact-detail-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@swintai.com&su=Enquiry+from+swintai.com" target="_blank" rel="noopener">
+        <a class="contact-detail-item" href="https://mail.google.com/mail/?view=cm&fs=1&to=hello@swintai.com" target="_blank" rel="noopener">
           <span class="contact-detail-icon">✉</span>
           <span>hello@swintai.com</span>
         </a>
@@ -864,7 +864,7 @@ contactForm.addEventListener('submit', async (e) => {
       company:   contactForm.querySelector('[name="company"]').value,
       email:     contactForm.querySelector('[name="email"]').value,
       challenge: contactForm.querySelector('[name="challenge"]').value,
-      subject:   'New enquiry from swintai.com',
+      subject:   `New enquiry from ${data.name || 'website visitor'}`,
     };
     const res = await fetch('https://api.web3forms.com/submit', {
       method: 'POST',
