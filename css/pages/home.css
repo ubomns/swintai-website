@@ -801,7 +801,7 @@ a.contact-detail-item:hover { opacity: 0.75; }
   .contact-inner    { grid-template-columns: 1fr; }
   .contact-left     { text-align: center; }
   .cta-sub          { margin-left: auto; margin-right: auto; }
-  .contact-details  { align-items: center; }
+  .contact-details  { align-items: flex-start; }
 }
 
 /* Tablet portrait → 768px */
